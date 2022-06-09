@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el <RegisterScreen /> debe hacer match con el snapshot 1`] = `
+<div
+  className="container login-container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-12 login-form-2"
+    >
+      <h3>
+        Registro
+      </h3>
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group mb-3"
+        >
+          <input
+            className="form-control"
+            name="name"
+            onChange={[Function]}
+            placeholder="Nombre"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="form-group mb-3"
+        >
+          <input
+            className="form-control mb-3"
+            name="email"
+            onChange={[Function]}
+            placeholder="Correo"
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          className="form-group mb-3"
+        >
+          <input
+            className="form-control"
+            name="password"
+            onChange={[Function]}
+            placeholder="Contraseña"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <input
+            className="form-control"
+            name="password2"
+            onChange={[Function]}
+            placeholder="Repita la contraseña"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className=" mt-4 d-grid gap-2"
+        >
+          <button
+            className="btn btn-primary btnSubmit"
+            type="submit"
+          >
+            Crear Cuenta
+          </button>
+        </div>
+      </form>
+      <a
+        className="text-white text-decoration-none"
+        href="/auth/login"
+        onClick={[Function]}
+      >
+        ¿Ya tienes una cuenta?
+      </a>
+    </div>
+  </div>
+</div>
+`;
