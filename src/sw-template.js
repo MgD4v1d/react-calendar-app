@@ -45,7 +45,7 @@ const chacheFirstNetwork = [
 
 registerRoute(
     ({request, url})=> {
-        console.log(url);
+        // console.log(url);
         if(chacheFirstNetwork.includes(url.href)) return true;
         return false;
     },
@@ -60,10 +60,15 @@ registerRoute(
 
 const bgSyncPlugin = new BackgroundSyncPlugin('posteos-offline', {
     maxRetentionTime: 24 * 60, // Retry for max of 24 Hours (specified in minutes)
-  });
+});
+
+
+const envApiurl = 'https://mern-calendar-exp.herokuapp.com/api';
+
+console.log(envApiurl);
 
 registerRoute(
-    new RegExp('http://localhost:4000/api/events/new'),
+    new RegExp(`${envApiurl}/events/new`),
     new NetworkOnly({
         plugins: [bgSyncPlugin],
     }),
@@ -72,7 +77,7 @@ registerRoute(
 
 
 registerRoute(
-    new RegExp('http://localhost:4000/api/events/edit/'),
+    new RegExp(`${envApiurl}/events/edit/`),
     new NetworkOnly({
         plugins: [bgSyncPlugin],
     }),
@@ -81,7 +86,7 @@ registerRoute(
 
 
 registerRoute(
-    new RegExp('http://localhost:4000/api/events/delete/'),
+    new RegExp(`${envApiurl}/events/delete/`),
     new NetworkOnly({
         plugins: [bgSyncPlugin],
     }),
